@@ -5,7 +5,7 @@ $Frm = New-Object System.Windows.Forms.Form
 $Frm.Text = "text here"
 $Frm.Height = 150
 $Frm.Width = 300
-$Frm.BackColor = "White"
+$Frm.BackColor = [System.Drawing.Color]::White
 
 $Frm.FormBorderStyle = [System.Windows.Forms.FormBorderStyle]::FixedSingle
 $Frm.StartPosition = [System.Windows.Forms.FormStartPosition]::CenterScreen
@@ -18,7 +18,7 @@ $Lbl.Top = 10
 $Lbl.Left = 10
 #"Tahoma"
 $Lbl.Font = [System.Windows.Forms.Label]::DefaultFont
-$Lbl.TextAlign = [System.Windows.ContentAlignment]::Center
+$Lbl.TextAlign = [System.Drawing.ContentAlignment]::TopCenter
 
 $Frm.Controls.Add($Lbl)
 
@@ -44,3 +44,4 @@ $Frm.Focus() | Out-Null
 Start-Sleep -Seconds 10
 
 $Frm.Close()
+exit
